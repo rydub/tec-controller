@@ -1,9 +1,9 @@
 #ifndef thermistor_h
 #define thermistor_h
 
-#define T_PIN A0        // Thermistor sampling pin
+#define T_PIN A14        // Thermistor sampling pin
 #define NUM_SAMPS 5     // Number of samples to average per reading
-#define R_REF 10000     // reference resistor for voltage divider
+#define R_REF 9960     // reference resistor for voltage divider
 
 void t_setup (bool mode);
 
