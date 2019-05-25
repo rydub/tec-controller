@@ -10,4 +10,6 @@
 
 void lcd_setup();
 
+void lcd_println(int line, char* msg);
+
 #endif

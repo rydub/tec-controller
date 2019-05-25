@@ -11,12 +11,17 @@ void tec_setup() {
 }
 
 void set_tec_voltage(int v) {
+  uint8_t val;
   if (v > 3.3) {
-    v = 3.3;
+    val = 256;
   } else if (v < 0) {
-    v = 0;
+    val = 0;
   } else {
-    v = v * 256 / 3.3;
+    val = (uint8_t) (v * 256 / 3.3);
   }
-  analogWrite(CTRL_PIN, v);
+  analogWrite(CTRL_PIN, val);
+}
+
+void set_tec_val(uint8_t val) {
+  analogWrite(CTRL_PIN, val);
 }

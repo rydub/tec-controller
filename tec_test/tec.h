@@ -5,6 +5,10 @@
 
 void tec_setup();
 
+uint8_t tec_volt2adc(float v);
+
 void set_tec_voltage(int v);
+
+void set_tec_val(uint8_t val);
 
 #endif  

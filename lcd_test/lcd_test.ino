@@ -9,4 +9,9 @@ void setup() {
   lcd_setup();
 }
 
-void loop() { }
+void loop() {
+  lcd_println(0, "new message 1");
+  delay(1000);
+  lcd_println(1, "new message 2");
+  delay(1000);
+}

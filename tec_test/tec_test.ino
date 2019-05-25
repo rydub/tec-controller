@@ -23,12 +23,12 @@ void setup() {
 void loop() {
   serial_read();
   if(new_data) {
-    set_tec_voltage(incoming_byte);
+    set_tec_val(incoming_byte);
     safety_t = micros();
   } else {
     if (micros() - safety_t > 1e7) {
       Serial.println("Timeout triggered, resetting pin");
-      set_tec_voltage(1023);
+      set_tec_voltage(0);
       safety_t = micros();
     }
   }
