@@ -49,10 +49,9 @@ int run_PID(float val) {
     i = 0;
   }
   //derivative term
-  //d = 0.01 * KD * (PID_err - prev_err) / (0.001 * (t - prev_t));
-  d = 0;
+  d = 0.01 * KD * (PID_err - prev_err) / (0.001 * (t - prev_t));
 
-  PID_value = p + i + d;
+  PID_value = roundf(p + i + d);
   
   //Ensure we are in the valid range for 8-bit analog writes.
   if(PID_value < 0) {

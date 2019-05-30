@@ -2,8 +2,8 @@
 #define PID_h
 
 #define KP 90
-#define KI 30
-#define KD 80
+#define KI 10
+#define KD 25
 
 void PID_setup(float target_val, bool mode=false);
 

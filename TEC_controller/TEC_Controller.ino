@@ -21,7 +21,7 @@ void report(char* msg) {
 void setup() {
   PID_setup(0, debug_mode);
   // SET TARGET VAL //
-  set_target_val(17);
+  set_target_val(16);
   t_setup(debug_mode);
   tec_setup(debug_mode);
   Serial.begin(9600);
